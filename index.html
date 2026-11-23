@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آذر صنعت | فروش ماشین آلات سنگبری</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Tahoma,sans-serif;
+background:#111;
+color:white;
+}
+header{
+background:#080808;
+padding:25px 15px;
+text-align:center;
+border-bottom:3px solid #d4af37;
+}
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#d4af37;
+}
+header p{color:#ccc}
+nav{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+nav a{
+color:#d4af37;
+text-decoration:none;
+padding:10px;
+}
+.hero{
+text-align:center;
+padding:45px 15px;
+background:linear-gradient(135deg,#222,#080808);
+}
+.hero h1{color:#d4af37}
+.hero p{line-height:2;color:#ddd}
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+h2{
+text-align:center;
+color:#d4af37;
+margin:35px 0;
+}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+.card{
+background:#202020;
+border:1px solid #80651f;
+border-radius:14px;
+padding:20px;
+text-align:center;
+}
+.card h3{color:#d4af37}
+.card p{color:#ccc;line-height:1.8}
+.card button,.order button{
+background:#d4af37;
+color:#111;
+border:0;
+padding:12px 18px;
+border-radius:9px;
+font-weight:bold;
+cursor:pointer;
+}
+.order{
+background:#202020;
+border:1px solid #d4af37;
+border-radius:15px;
+padding:25px;
+margin-top:35px;
+}
+select,input,textarea{
+width:100%;
+padding:13px;
+margin:10px 0;
+background:#111;
+border:1px solid #d4af37;
+border-radius:8px;
+color:white;
+font-family:Tahoma;
+}
+textarea{height:100px}
+.order button{width:100%;font-size:17px}
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+border-top:1px solid #555;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">AZAR SANAT</div>
+<p>ابزارآلات و ماشین آلات سنگبری آذر صنعت</p>
+<nav>
+<a href="#home">صفحه اصلی</a>
+<a href="#products">محصولات</a>
+<a href="#order">ثبت سفارش</a>
+<a href="#contact">تماس با ما</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>به آذر صنعت خوش آمدید</h1>
+<p>
+عرضه ابزارآلات و ماشین آلات سنگبری
+<br>
+کیفیت، خدمات و رضایت مشتری
+</p>
+<a href="#products">
+<button style="background:#d4af37;padding:13px 25px;border:0;border-radius:9px">
+مشاهده محصولات
+</button>
+</a>
+</section>
+
+<div class="container">
+<h2 id="products">محصولات آذر صنعت</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>دستگاه سنگبری</h3>
+<p>دستگاه های برش سنگ</p>
+<button onclick="choose('دستگاه سنگبری')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>فارسی بر دستی</h3>
+<p>ابزار فارسی بر دستی</p>
+<button onclick="choose('فارسی بر دستی')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>ابزار زن</h3>
+<p>ابزار زن در سایزهای مختلف</p>
+<button onclick="choose('ابزار زن')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>سنباده</h3>
+<p>انواع ابزار سنباده</p>
+<button onclick="choose('سنباده')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>کاور دستگاه</h3>
+<p>کاور ضد آب و ضد گرد و غبار</p>
+<button onclick="choose('کاور ضد آب و ضد گرد و غبار')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>پمپ</h3>
+<p>انواع پمپ مورد استفاده در سنگبری</p>
+<button onclick="choose('پمپ')">سفارش محصول</button>
+</div>
+
+<div class="card">
+<h3>سایر محصولات</h3>
+<p>برای سفارش سایر ابزارآلات</p>
+<button onclick="choose('سایر محصولات')">سفارش محصول</button>
+</div>
+
+</div>
+
+<div class="order" id="order">
+<h2>ثبت سفارش</h2>
+<label>نام شما</label>
+<input id="name" placeholder="نام و نام خانوادگی">
+
+<label>انتخاب محصول</label>
+<select id="product">
+<option value="">انتخاب کنید</option>
+<option>دستگاه سنگبری</option>
+<option>فارسی بر دستی</option>
+<option>ابزار زن</option>
+<option>سنباده</option>
+<option>کاور ضد آب و ضد گرد و غبار</option>
+<option>پمپ</option>
+<option>سایر محصولات</option>
+</select>
+
+<label>تعداد و توضیحات</label>
+<textarea id="details" placeholder="تعداد و توضیحات سفارش"></textarea>
+
+<button onclick="sendOrder()">ارسال سفارش در واتساپ</button>
+</div>
+</div>
+
+<footer id="contact">
+<h3 style="color:#d4af37">آذر صنعت</h3>
+<p>ابزارآلات و ماشین آلات سنگبری</p>
+<p>تلفن: 09144153282</p>
+<p>وب سایت: www.azarsanat.ir</p>
+</footer>
+
+<script>
+function choose(product){
+document.getElementById('product').value=product;
+document.getElementById('order').scrollIntoView({behavior:'smooth'});
+}
+
+function sendOrder(){
+let name=document.getElementById('name').value.trim();
+let product=document.getElementById('product').value;
+let details=document.getElementById('details').value.trim();
+
+if(!product){
+alert('لطفاً محصول را انتخاب کنید');
+return;
+}
+
+let message='سلام آذر صنعت، درخواست سفارش دارم.\n';
+message+='نام: '+(name||'ثبت نشده')+'\n';
+message+='محصول: '+product+'\n';
+message+='توضیحات: '+(details||'ندارد');
+
+window.open(
+'https://wa.me/989144153282?text='+encodeURIComponent(message),
+'_blank'
+);
+}
+</script>
+
+</body>
+</html>
